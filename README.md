@@ -158,34 +158,8 @@ Modular Structure: Organized codebase using MVC (Models, Views, Controllers) pat
 JWT Authentication: Secure user sessions with stateless JWT tokens.
 
 Project Directory Structure :
-book-review-api/
-├── src/
-│   ├── config/
-│   │   └── db.js
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── bookController.js
-│   │   └── reviewController.js
-│   ├── middleware/
-│   │   ├── authMiddleware.js
-│   │   └── errorHandler.js
-│   ├── models/
-│   │   ├── userModel.js
-│   │   ├── bookModel.js
-│   │   └── reviewModel.js
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── bookRoutes.js
-│   │   └── reviewRoutes.js
-│   ├── utils/
-│   │   ├── jwt.js
-│   │   └── error.js
-│   ├── app.js
-│   └── server.js
-├── .env
-├── package.json
-└── README.md
 
+The project is organized as follows: the root directory book-review-api/ contains the .env, package.json, and README.md files. Inside the src/ directory, you’ll find config/db.js for database configuration; controllers/ with authController.js, bookController.js, and reviewController.js for handling HTTP requests; middleware/ with authMiddleware.js and errorHandler.js for authentication and error handling; models/ with userModel.js, bookModel.js, and reviewModel.js for database operations; routes/ with authRoutes.js, bookRoutes.js, and reviewRoutes.js for API route definitions; utils/ with jwt.js and error.js for utility functions; and finally, app.js and server.js for application setup and server entry point.
 
 
 Endpoints Existing in the Project 
