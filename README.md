@@ -157,9 +157,49 @@ Modular Structure: Organized codebase using MVC (Models, Views, Controllers) pat
 
 JWT Authentication: Secure user sessions with stateless JWT tokens.
 
-PostgreSQL: Used for relational integrity and efficient querying.
+Project Directory Structure :
+book-review-api/
+├── src/
+│   ├── config/
+│   │   └── db.js
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── bookController.js
+│   │   └── reviewController.js
+│   ├── middleware/
+│   │   ├── authMiddleware.js
+│   │   └── errorHandler.js
+│   ├── models/
+│   │   ├── userModel.js
+│   │   ├── bookModel.js
+│   │   └── reviewModel.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── bookRoutes.js
+│   │   └── reviewRoutes.js
+│   ├── utils/
+│   │   ├── jwt.js
+│   │   └── error.js
+│   ├── app.js
+│   └── server.js
+├── .env
+├── package.json
+└── README.md
 
-Pagination & Filtering: Ensures scalable performance while listing books.
 
-Error Handling: Consistent API responses via centralized middleware.
 
+Endpoints Existing in the Project 
+
+API Endpoints
+POST /auth/signup: Register a new user (Authentication: No)
+POST /auth/login: Login and get JWT token (Authentication: No)
+POST /books: Add a new book (Authentication: Yes)
+GET /books: Get all books (Authentication: No)
+GET /books/search: Search books by query (Authentication: No)
+GET /books/:id: Get book details (Authentication: No)
+POST /books/:id/reviews: Submit a review for a book (Authentication: Yes)
+PUT /reviews/:id: Update a review (Authentication: Yes)
+DELETE /reviews/:id: Delete a review (Authentication: Yes)
+
+Some Examples : http://localhost:3000/reviews/1
+http://localhost:3000/books
